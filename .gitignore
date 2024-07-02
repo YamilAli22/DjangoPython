@@ -22,3 +22,6 @@ venv.bak/
 
 # git
 .git
+
+# sql
+.sqlite3
