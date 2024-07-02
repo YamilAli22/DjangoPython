@@ -1,0 +1,23 @@
+{% extends "approyecto/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="row">
+        {% for servicio in servicios %}
+        <div class="col-md-6 mb-4">
+            <div class="card bg-dark text-white">
+                <img src="{{servicio.imagen.url}}" class="card-img-top" alt="{{ servicio.titulo }}">
+                <div class="card-body">
+                    <h2 class="card-title">{{ servicio.titulo }}</h2>
+                    <p class="card-text">{{ servicio.contenido }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
